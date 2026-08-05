@@ -137,6 +137,15 @@ h2.sec{font-size:clamp(24px,3.2vw,32px);margin-bottom:22px}
 .callout{margin-top:22px;background:linear-gradient(180deg,#fff, #fbfcfa);border:1px solid var(--line);border-left:3px solid transparent;border-image:var(--trace) 1;border-radius:var(--r);padding:22px 24px}
 .callout p{margin:0;color:#2c313a}
 
+/* ---------- Sponsors ---------- */
+.sp-row{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.sp{display:grid;place-items:center;min-width:150px;height:78px;padding:10px 20px;background:#fff;border:1px solid var(--line);border-radius:var(--r);text-decoration:none;transition:transform .12s ease,border-color .12s ease}
+.sp:hover{text-decoration:none;border-color:var(--teal);transform:translateY(-1px)}
+.sp img{max-height:50px;max-width:180px;object-fit:contain;filter:grayscale(1);opacity:.78;transition:filter .12s ease,opacity .12s ease}
+.sp:hover img{filter:none;opacity:1}
+.sp-txt{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:13.5px;letter-spacing:.06em;color:var(--slate);text-transform:uppercase;text-align:center;line-height:1.2}
+.sp:hover .sp-txt{color:var(--navy)}
+
 /* ---------- Footer ---------- */
 .site-footer{background:var(--navy);color:#c9d4ec;margin-top:24px}
 .site-footer .wrap{padding:40px 24px 34px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
