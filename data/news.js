@@ -6,6 +6,7 @@
 window.SITE = window.SITE || {};
 
 SITE.news = [
+  { date: "Aug 2026", html: "Two papers accepted at IEEE/ACM <strong>ESWEEK 2026</strong> (Barcelona, Spain): <em>M3D-FLOW</em> at CASES 2026, and <em>STORM</em> at CODES 2026." },
   { date: "Aug 2026", html: "UCAT presents two papers at ACM <strong>ICONS 2026</strong> (Chicago): <em>HiRo</em>, a compact hierarchical reservoir token-mixer, and <em>EchoDiff</em>, echo-state reservoirs for parameter-efficient diffusion image generation." },
   { date: "Jun 2026", html: "<em>Power-Dependent Optimal Detuning of Microring Modulators</em> receives a <strong>Best Paper Award Nomination</strong> at IEEE OIP 2026." },
   { date: "Jun 2025", html: "UCAT receives an <strong>NSF CCF grant</strong> for sustainable, reliable electro-photonic communication and computing systems." },
