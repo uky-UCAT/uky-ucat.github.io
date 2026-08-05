@@ -1,25 +1,37 @@
 /* =============================================================
    RESEARCH GROUP  (UCAT Lab members + alumni)
+
+   Adding a student headshot:
+     1. Drop a square photo at  assets/img/students/<slug>.jpg
+        (a 400×400 or larger square works best; jpg or png).
+     2. Set the `photo` field on that student's entry, e.g.
+          photo:"assets/img/students/rifa.jpg"
+     3. Save, commit, push.
+
+   Photos are shown for CURRENT students only (phd, ms, bs, postdoc).
+   Alumni cards intentionally stay text-only.
+   If `photo` is empty or the file is missing, the card automatically
+   falls back to the student's initials on a navy circle.
    ============================================================= */
 window.SITE = window.SITE || {};
 
 SITE.students = {
   phd: [
-    { name:"Kazi Ramisa Rifa",   since:"2026", topic:"Neuromorphic Generative AI" },
-    { name:"Md Farhadul Islam",  since:"2026", topic:"Physics-Fused Generative AI" },
-    { name:"Saurabh Gupta",       since:"2026", topic:"Sustainable Electro-Photonic Computing Architectures" },
-    { name:"Bharat Bhatta",       since:"2026", topic:"Sustainable Neuromorphic Computing Architectures" },
-    { name:"Changpeng Ti",        since:"2025", topic:"Neuromorphic Computing with Artificial Spin Lattices (co-advised with Prof. Sen-Ching Cheung)" },
-    { name:"Bipin Thapa Magar",   since:"2025", topic:"In-Memory and In-Material Neuromorphic Computing" }
+    { name:"Kazi Ramisa Rifa",    since:"2026", topic:"Neuromorphic Generative AI",                                                                             photo:"" },
+    { name:"Md Farhadul Islam",   since:"2026", topic:"Physics-Fused Generative AI",                                                                            photo:"" },
+    { name:"Saurabh Gupta",       since:"2026", topic:"Sustainable Electro-Photonic Computing Architectures",                                                   photo:"" },
+    { name:"Bharat Bhatta",       since:"2026", topic:"Sustainable Neuromorphic Computing Architectures",                                                       photo:"" },
+    { name:"Changpeng Ti",        since:"2025", topic:"Neuromorphic Computing with Artificial Spin Lattices (co-advised with Prof. Sen-Ching Cheung)",          photo:"" },
+    { name:"Bipin Thapa Magar",   since:"2025", topic:"In-Memory and In-Material Neuromorphic Computing",                                                       photo:"" }
   ],
   ms: [
-    { name:"Abrahim Hamdan", since:"2025", topic:"Computing with Artificial Spin Lattices (M.S. thesis, EE)" }
+    { name:"Abrahim Hamdan", since:"2025", topic:"Computing with Artificial Spin Lattices (M.S. thesis, EE)", photo:"" }
   ],
   bs: [
-    { name:"Keaton Poyner", since:"2025", topic:"Neuromorphic Computing" }
+    { name:"Keaton Poyner", since:"2025", topic:"Neuromorphic Computing", photo:"" }
   ],
   postdoc: [
-    { name:"Justin Woods", when:"2021–2022", topic:"Silicon Nitride Optical Modulators (co-advised with Dr. Todd Hastings)" }
+    { name:"Justin Woods", when:"2021–2022", topic:"Silicon Nitride Optical Modulators (co-advised with Dr. Todd Hastings)", photo:"" }
   ],
   alumni: [
     { name:"Oluwaseun Alo",                    degree:"Ph.D., EE, 2026", topic:"Energy-efficient, scalable tensor-processing architectures with electro-photonic ICs" },
