@@ -37,6 +37,13 @@ inside `html`.
 **Add / move a student** — edit `data/students.js` (move a name from `phd` to
 `alumni`, add a `degree` and where they went).
 
+**Add a student headshot** — drop a square photo at
+`assets/img/students/<lastname>.jpg`, then in `data/students.js` set that
+student's `photo` field to `"assets/img/students/<lastname>.jpg"`. Photos are
+only shown for current students (Ph.D., M.S., B.S., postdoc); alumni cards
+stay text-only. If a photo is missing, the card falls back to the student's
+initials on a navy circle.
+
 **Edit bio, honors, service, links** — `data/profile.js`.
 
 **Add your headshot** — drop a square photo at `assets/img/profile.jpg`. Until
