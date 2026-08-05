@@ -1,0 +1,21 @@
+Drop sponsor logo files here. Prefer SVG when available; transparent PNG
+also works well. Filename convention:
+  nsf.svg / nsf.png
+  doe.svg / doe.png
+  ky-multiscale.png
+  cmc.svg
+  argonne.png
+
+Then in data/sponsors.js set the sponsor's `logo` field, e.g.
+  logo:"assets/img/sponsors/nsf.svg"
+
+Sources (as of 2026):
+  NSF:            https://www.nsf.gov/policies/logos.jsp
+  DOE:            https://www.energy.gov (footer → media)
+  KY Multiscale:  https://kymultiscale.org (About page / branding)
+  CMC:            https://www.cmc.ca (brand assets)
+  Argonne:        https://www.anl.gov/about-argonne/logos-and-branding-guidelines
+
+Note: the site displays each logo grayscale by default and returns
+to full color on hover, so a variety of source colors will still look
+consistent.
