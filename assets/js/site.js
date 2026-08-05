@@ -172,27 +172,50 @@
   }
 
   /* ---------- Group ---------- */
-  function personCard(p){
-    var meta=p.degree?p.degree:((p.since?"Since "+p.since:"")||(p.when||""));
-    return '<div class="person"><div class="pn">'+esc(p.name)+'</div>'+
-      (meta?'<div class="pd">'+esc(meta)+'</div>':'')+
-      (p.topic?'<div class="pt">'+esc(p.topic)+'</div>':'')+'</div>';
+  function initials(name){
+    var parts=String(name||"").trim().split(/\s+/);
+    if(!parts[0]) return "?";
+    if(parts.length===1) return parts[0].charAt(0).toUpperCase();
+    return (parts[0].charAt(0)+parts[parts.length-1].charAt(0)).toUpperCase();
   }
-  function peopleBlock(id,title,arr){
+  function personCard(p,withPhoto){
+    var meta=p.degree?p.degree:((p.since?"Since "+p.since:"")||(p.when||""));
+    var info='<div class="pinfo">'+
+      '<div class="pn">'+esc(p.name)+'</div>'+
+      (meta?'<div class="pd">'+esc(meta)+'</div>':'')+
+      (p.topic?'<div class="pt">'+esc(p.topic)+'</div>':'')+
+    '</div>';
+    if(!withPhoto) return '<div class="person">'+info+'</div>';
+    var ini=initials(p.name);
+    var avatar=p.photo
+      ? '<img class="avatar" src="'+esc(p.photo)+'" alt="'+esc(p.name)+'" data-initials="'+esc(ini)+'">'
+      : '<div class="avatar-fallback">'+esc(ini)+'</div>';
+    return '<div class="person with-photo">'+avatar+info+'</div>';
+  }
+  function peopleBlock(id,title,arr,withPhoto){
     if(!arr||!arr.length) return "";
     return '<div class="section" style="border:none;padding:0 0 8px">'+
       '<div class="eyebrow">'+esc(title)+'</div>'+
-      '<div class="people">'+arr.map(personCard).join("")+'</div></div>';
+      '<div class="people">'+arr.map(function(p){return personCard(p,withPhoto);}).join("")+'</div></div>';
   }
   function renderGroup(){
     var st=S.students||{};
     var html=
-      peopleBlock("phd","Ph.D. Students",st.phd)+
-      peopleBlock("ms","M.S. Thesis Students",st.ms)+
-      peopleBlock("bs","Undergraduate Researchers",st.bs)+
-      peopleBlock("postdoc","Postdoctoral Researchers",st.postdoc)+
-      peopleBlock("alumni","Alumni",st.alumni);
+      peopleBlock("phd","Ph.D. Students",st.phd,true)+
+      peopleBlock("ms","M.S. Thesis Students",st.ms,true)+
+      peopleBlock("bs","Undergraduate Researchers",st.bs,true)+
+      peopleBlock("postdoc","Postdoctoral Researchers",st.postdoc,true)+
+      peopleBlock("alumni","Alumni",st.alumni,false);
     set("group-list",html);
+    // Swap broken/missing avatar images for the initials fallback
+    [].slice.call(document.querySelectorAll(".person .avatar")).forEach(function(img){
+      img.addEventListener("error",function(){
+        var fb=document.createElement("div");
+        fb.className="avatar-fallback";
+        fb.textContent=img.getAttribute("data-initials")||"?";
+        img.parentNode.replaceChild(fb,img);
+      });
+    });
     if(S.prospective) set("prospective",'<div class="callout"><p>'+esc(S.prospective)+'</p></div>');
   }
 
