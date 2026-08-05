@@ -17,10 +17,10 @@ window.SITE = window.SITE || {};
 
 SITE.students = {
   phd: [
-    { name:"Kazi Ramisa Rifa",    since:"2026", topic:"Neuromorphic Generative AI",                                                                             photo:"" },
-    { name:"Md Farhadul Islam",   since:"2026", topic:"Physics-Fused Generative AI",                                                                            photo:"" },
-    { name:"Saurabh Gupta",       since:"2026", topic:"Sustainable Electro-Photonic Computing Architectures",                                                   photo:"" },
-    { name:"Bharat Bhatta",       since:"2026", topic:"Sustainable Neuromorphic Computing Architectures",                                                       photo:"" },
+    { name:"Kazi Ramisa Rifa",    since:"2026", topic:"Neuromorphic Generative AI",                                                                             photo:"assets/img/students/ramisa.jpg" },
+    { name:"Md Farhadul Islam",   since:"2026", topic:"Physics-Fused Generative AI",                                                                            photo:"assets/img/students/farhad.jpg" },
+    { name:"Saurabh Gupta",       since:"2026", topic:"Sustainable Electro-Photonic Computing Architectures",                                                   photo:"assets/img/students/saurabh.jpg" },
+    { name:"Bharat Bhatta",       since:"2026", topic:"Sustainable Neuromorphic Computing Architectures",                                                       photo:"assets/img/students/bharat.jpg" },
     { name:"Changpeng Ti",        since:"2025", topic:"Neuromorphic Computing with Artificial Spin Lattices (co-advised with Prof. Sen-Ching Cheung)",          photo:"" },
     { name:"Bipin Thapa Magar",   since:"2025", topic:"In-Memory and In-Material Neuromorphic Computing",                                                       photo:"" }
   ],
