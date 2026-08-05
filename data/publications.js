@@ -10,6 +10,8 @@ window.SITE = window.SITE || {};
 SITE.publications = {
 
   journal: [
+    { id:"J20", authors:"Salma Afifi, V. Ravindran, Ishan Thakkar, Sudeep Pasricha", title:"STORM: A Sustainable Optical Systolic Array Accelerator for State-Space Models", venue:"IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)", year:2026 }, 
+    { id:"J19", authors:"Bipin Thapa Magar, Ishan Thakkar, Sudeep Pasricha", title:"M3D-FLOW: A Monolithic 3D Stackable Processing-Near-DRAM Architecture for Generative Normalizing Flow Applications", venue:"IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)", year:2026 },
     { id:"J18", authors:"Bipin Thapa Magar, Salma Afifi, Ishan Thakkar, Sudeep Pasricha", title:"DRISTI: Enabling Hierarchical Buffering and Flexible Dataflows for Reconfigurable In-DRAM Neural Network Accelerators", venue:"IEEE Transactions on Circuits and Systems for AI (TCASAI)", year:2026 },
     { id:"J17", authors:"Salma Afifi, Oluwaseun Alo, Ishan Thakkar, Sudeep Pasricha", title:"ASTRA: A Stochastic Transformer Neural Network Accelerator with Silicon Photonics", venue:"ACM Transactions on Embedded Computing Systems (TECS)", year:2025 },
     { id:"J16", authors:"Venkata Sai Praneeth Karempudi, Sairam Sri Vatsavai, Ishan Thakkar", title:"A Hybrid Time-Amplitude Analog Photonic Accelerator for General Matrix-Matrix Multiplications", venue:"Journal of Applied Physics (JAP)", year:2025, award:"Under revision" },
