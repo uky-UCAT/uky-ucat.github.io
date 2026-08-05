@@ -37,6 +37,11 @@ inside `html`.
 **Add / move a student** — edit `data/students.js` (move a name from `phd` to
 `alumni`, add a `degree` and where they went).
 
+**Add / update a research sponsor** — edit `data/sponsors.js`. To reorder or
+remove sponsors, edit the list. To swap the text badge for an official logo,
+drop the file at `assets/img/sponsors/<slug>.svg` (or `.png`) and set the
+`logo` field on that entry to that path.
+
 **Add a student headshot** — drop a square photo at
 `assets/img/students/<lastname>.jpg`, then in `data/students.js` set that
 student's `photo` field to `"assets/img/students/<lastname>.jpg"`. Photos are
