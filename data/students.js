@@ -22,7 +22,7 @@ SITE.students = {
     { name:"Saurabh Gupta",       since:"2026", topic:"Sustainable Electro-Photonic Computing Architectures",                                                   photo:"" },
     { name:"Bharat Bhatta",       since:"2026", topic:"Sustainable Neuromorphic Computing Architectures",                                                       photo:"" },
     { name:"Changpeng Ti",        since:"2025", topic:"Neuromorphic Computing with Artificial Spin Lattices (co-advised with Prof. Sen-Ching Cheung)",          photo:"" },
-    { name:"Bipin Thapa Magar",   since:"2025", topic:"In-Memory and In-Material Neuromorphic Computing",                                                       photo:"assets/img/students/bipin.jpg" }
+    { name:"Bipin Thapa Magar",   since:"2025", topic:"In-Memory and In-Material Neuromorphic Computing",                                                       photo:"" }
   ],
   ms: [
     { name:"Abrahim Hamdan", since:"2025", topic:"Computing with Artificial Spin Lattices (M.S. thesis, EE)", photo:"" }
