@@ -219,6 +219,28 @@
     if(S.prospective) set("prospective",'<div class="callout"><p>'+esc(S.prospective)+'</p></div>');
   }
 
+  /* ---------- Sponsors ---------- */
+  function renderSponsors(){
+    var list=(S.sponsors||[]).map(function(s){
+      var label=esc(s.short||s.name);
+      var fallback='<div class="sp-txt">'+label+'</div>';
+      var body=s.logo
+        ? '<img src="'+esc(s.logo)+'" alt="'+esc(s.name)+'" data-label="'+label+'">'
+        : fallback;
+      return '<a class="sp" href="'+esc(s.url||"#")+'" target="_blank" rel="noopener" title="'+esc(s.name)+'">'+body+'</a>';
+    }).join("");
+    set("sponsors",'<div class="sp-row">'+list+'</div>');
+    // If a logo file is missing, gracefully swap in the text badge
+    [].slice.call(document.querySelectorAll(".sp img")).forEach(function(img){
+      img.addEventListener("error",function(){
+        var fb=document.createElement("div");
+        fb.className="sp-txt";
+        fb.textContent=img.getAttribute("data-label")||"";
+        img.parentNode.replaceChild(fb,img);
+      });
+    });
+  }
+
   function set(id,html){var n=document.getElementById(id);if(n)n.innerHTML=html;}
 
   /* ---------- boot ---------- */
@@ -226,5 +248,7 @@
     mountChrome();
     var page=document.body.dataset.page;
     ({home:renderHome,research:renderResearch,publications:renderPublications,teaching:renderTeaching,group:renderGroup}[page]||function(){})();
+    // Sponsors block renders on any page that has a #sponsors container
+    if(document.getElementById("sponsors")) renderSponsors();
   });
 })();
