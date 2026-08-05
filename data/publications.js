@@ -33,6 +33,8 @@ SITE.publications = {
   ],
 
   conference: [
+    { id:"C60", authors:"Salma Afifi, V. Ravindran, Ishan Thakkar, Sudeep Pasricha", title:"STORM: A Sustainable Optical Systolic Array Accelerator for State-Space Models", venue:"IEEE/ACM International Conference on Codesign of Embedded Systems(CODES ESWEEK)", year:2026 }, 
+    { id:"C59", authors:"Bipin Thapa Magar, Ishan Thakkar, Sudeep Pasricha", title:"M3D-FLOW: A Monolithic 3D Stackable Processing-Near-DRAM Architecture for Generative Normalizing Flow Applications", venue:"IEEE/ACM International Conference on Compilers, Architectures, and Synthesis for Embedded Systems (CASES ESWEEK)", year:2026 },
     { id:"C58", authors:"Md Farhadul Islam, Ishan Thakkar, J. Todd Hastings", title:"HiRo: A Compact Four-Directional Hierarchical Reservoir Token-Mixer for Efficient Image Classification", venue:"ACM International Conference on Neuromorphic Systems (ICONS), Chicago, IL", year:2026 },
     { id:"C57", authors:"Kazi Ramisa Rifa, Ishan Thakkar, Sen-Ching Samson Cheung, J. Todd Hastings", title:"EchoDiff: Echo State Reservoirs for Parameter-Efficient Diffusion Image Generation", venue:"ACM International Conference on Neuromorphic Systems (ICONS), Chicago, IL", year:2026 },
     { id:"C56", authors:"Bipin Thapa Magar, Samrat P. Patel, Ishan Thakkar", title:"Carbon at the Memory Wall: Lifecycle and Aging-Aware Analysis of Processing-in-DRAM LLM Servers", venue:"International Green and Sustainable Computing Conference (IGSC), Finger Lakes, NY", year:2026 },
