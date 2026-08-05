@@ -1,0 +1,9 @@
+Drop square student headshots here (jpg or png). File-name convention:
+  <lastname>.jpg   e.g.  rifa.jpg, islam.jpg, thapa-magar.jpg
+
+Then in data/students.js set the student's `photo` field to
+  photo: "assets/img/students/<lastname>.jpg"
+
+Only current students (phd/ms/bs/postdoc) support photos; alumni cards
+stay text-only. If a file is missing, the card falls back to the
+student's initials on a navy circle.
